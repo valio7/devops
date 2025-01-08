@@ -6,8 +6,12 @@ jobs:
   quality_assurance:
     runs-on: ubuntu-latest
     steps:
+      - name: Print working directory
+        run: ls -la
+        working-directory: ./devops
+
       - name: Run tests
-        run: npm run test 
+        run: npm run test
 
       - name: Runs lint
         run: npm run lint

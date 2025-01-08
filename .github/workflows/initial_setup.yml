@@ -8,7 +8,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        working-directory: .
+        with:
+          path: devops
 
       - name: Set up node
         uses: actions/setup-node@v4
+        working-directory: ./devops
