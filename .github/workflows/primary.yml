@@ -12,4 +12,4 @@ jobs:
 
   quality_assurance:
     needs: initial_setup
-    uses: ./.github/workflows/quality_assuarance.yml
+    uses: ./.github/workflows/quality_assurance.yml
