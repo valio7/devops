@@ -1,6 +1,10 @@
-name: Pull request workflow
+name: Primary workflow
 
-on: [pull_request] 
+on:
+  pull_request:
+  push:
+    branches:
+      - main
 
 jobs:
   initial_setup:
