@@ -6,10 +6,6 @@ jobs:
   quality_assurance:
     runs-on: ubuntu-latest
     steps:
-
-      - name: Check what's going on
-        run: ls
-
       - name: Run tests
         run: npm run test 
 
