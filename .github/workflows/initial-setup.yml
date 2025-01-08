@@ -5,8 +5,8 @@ on: [workflow_call]
 jobs:
   initial_setup:
     steps:
-      -name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      -name: Set up node
-      uses: actions/setup-node@v4
+      - name: Set up node
+        uses: actions/setup-node@v4

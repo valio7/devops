@@ -1,11 +1,11 @@
 name: Pull request workflow
 
-on: [pull_request]
+on: [pull_request] 
 
 jobs:
   initial_setup:
-    uses: "./initial-setup.yml"
-  quality_gate:
-    uses: "./quality-assuarance.yml"
-    needs: inital_setup
-  
+    uses: ./initial_setup.yml
+
+  quality_assurance:
+    needs: initial_setup
+    uses: ./quality_assuarance.yml

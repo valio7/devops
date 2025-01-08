@@ -1,0 +1,15 @@
+name: Code quality assuarance
+
+on: [workflow_call]
+
+jobs:
+  quality_assurance:
+    steps:
+      - name: Run tests
+        run: npm run test 
+
+      - name: Runs lint
+        run: npm run lint
+
+      - name: Runs sonar
+        run: echo "hi sonar"
