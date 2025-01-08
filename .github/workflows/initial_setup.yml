@@ -13,4 +13,3 @@ jobs:
 
       - name: Set up node
         uses: actions/setup-node@v4
-        working-directory: ./devops
