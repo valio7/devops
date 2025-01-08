@@ -8,8 +8,8 @@ on:
 
 jobs:
   initial_setup:
-    uses: /.github/workflows/initial_setup.yml
+    uses: ./.github/workflows/initial_setup.yml
 
   quality_assurance:
     needs: initial_setup
-    uses: /.github/workflows/quality_assuarance.yml
+    uses: ./.github/workflows/quality_assuarance.yml
