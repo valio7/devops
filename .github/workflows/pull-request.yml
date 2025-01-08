@@ -4,8 +4,8 @@ on: [pull_request]
 
 jobs:
   initial_setup:
-    uses: ./.github/workflows/initial_setup.yml@main
+    uses: ./.github/workflows/initial_setup.yml
 
   quality_assurance:
     needs: initial_setup
-    uses: ./.github/workflows/quality_assuarance.yml@main
+    uses: ./.github/workflows/quality_assuarance.yml
