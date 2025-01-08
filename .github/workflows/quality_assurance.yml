@@ -4,6 +4,7 @@ on: [workflow_call]
 
 jobs:
   quality_assurance:
+    runs-on: ubuntu-latest
     steps:
       - name: Run tests
         run: npm run test 
