@@ -12,6 +12,9 @@ jobs:
       - name: Set up node
         uses: actions/setup-node@v4
 
+        - name: Run tests
+        run: npm install
+
       - name: Run tests
         run: npm run test
 
