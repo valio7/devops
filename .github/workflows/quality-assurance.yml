@@ -19,13 +19,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Add .env file
-        env:
-          PORT: ${{ env.PORT }}
-        run: |
-          echo "PORT=${PORT}" >> .env
-          cat .env
-
       - name: Run tests
         run: npm run test
 
