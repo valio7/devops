@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "ava",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "dev": "node src/index.js"
   },
   "author": "",
   "license": "ISC",
