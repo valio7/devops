@@ -24,6 +24,7 @@ jobs:
           PORT: ${{ env.PORT }}
         run: |
           echo "PORT=${PORT}" >> .env
+          cat .env
 
       - name: Run tests
         run: npm run test
