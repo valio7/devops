@@ -3,7 +3,7 @@ name: Primary Workflow
 on:
   push:
     branches:
-      - master
+      - develop
 
 jobs:
   pull-request:
