@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "ava",
-    "lint": "eslint .",
+    "lint": "eslint ./src",
     "dev": "node src/index.js"
   },
   "author": "",
