@@ -23,5 +23,5 @@ jobs:
 
       - name: Runs sonar
         uses: SonarSource/sonarqube-scan-action@v4
-        env: 
+        inputs: 
           SONAR_TOKEN: SONAR_TOKEN

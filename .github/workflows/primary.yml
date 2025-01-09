@@ -10,4 +10,4 @@ jobs:
   quality_assurance:
     uses: ./.github/workflows/quality_assurance.yml
     with:
-      SONAR_TOKEN: ${{ secrets.SECRET_TOKEN }}
+      SONAR_TOKEN: $secrets.SONAR_TOKEN
