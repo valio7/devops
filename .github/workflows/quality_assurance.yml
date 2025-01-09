@@ -6,8 +6,11 @@ jobs:
   quality_assurance:
     runs-on: ubuntu-latest
     steps:
-      - name: Print working directory
-        run: ls -la
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up node
+        uses: actions/setup-node@v4
 
       - name: Run tests
         run: npm run test

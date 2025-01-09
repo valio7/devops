@@ -7,9 +7,6 @@ on:
       - master
 
 jobs:
-  initial_setup:
-    uses: ./.github/workflows/initial_setup.yml
-
   quality_assurance:
     needs: initial_setup
     uses: ./.github/workflows/quality_assurance.yml
