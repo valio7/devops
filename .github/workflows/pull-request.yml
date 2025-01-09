@@ -1,0 +1,21 @@
+name: Pull request workflow
+
+on: 
+  pull_request:
+  workflow_call:
+    secrets:
+      SNYK_TOKEN:
+        required: true
+      SONAR_TOKEN:
+        required: true
+
+jobs:
+  sast-scan:
+    uses: ./.github/workflows/sast-scan.yml
+    secrets:
+      SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+
+  quality_assurance:
+    uses: ./.github/workflows/quality-assurance.yml
+    secrets:
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

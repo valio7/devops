@@ -6,19 +6,15 @@ on:
       - master
 
 jobs:
-  sast-scan:
-    uses: ./.github/workflows/sast-scan.yml
-    secrets:
-      SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-
-  quality_assurance:
-    uses: ./.github/workflows/quality-assurance.yml
+  pull_request:
+    uses: ./.github/workflows/pull-request.yml
     secrets:
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
   build-docker-image:
     uses: ./.github/workflows/build-docker-image.yml
-    needs: quality_assurance
+    needs: pull_request
     secrets:
       DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
       DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
