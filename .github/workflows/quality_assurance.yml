@@ -1,6 +1,10 @@
-name: Code quality assuarance
+name: Code Quality Assurance
 
-on: [workflow_call]
+on:
+  workflow_call:
+    secrets:
+      SONAR_TOKEN:
+        required: true
 
 jobs:
   quality_assurance:
@@ -9,19 +13,19 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up node
+      - name: Set up Node.js
         uses: actions/setup-node@v4
 
-      - name: Run tests
+      - name: Install dependencies
         run: npm install
 
       - name: Run tests
         run: npm run test
 
-      - name: Runs lint
+      - name: Run lint
         run: npm run lint
 
-      - name: Runs sonar
+      - name: Run SonarQube analysis
         uses: SonarSource/sonarqube-scan-action@v4
-        inputs: 
-          SONAR_TOKEN: SONAR_TOKEN
+        env: 
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

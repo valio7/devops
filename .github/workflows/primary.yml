@@ -1,4 +1,4 @@
-name: Primary workflow
+name: Primary Workflow
 
 on:
   pull_request:
@@ -9,5 +9,5 @@ on:
 jobs:
   quality_assurance:
     uses: ./.github/workflows/quality_assurance.yml
-    with:
-      SONAR_TOKEN: $secrets.SONAR_TOKEN
+    secrets:
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
