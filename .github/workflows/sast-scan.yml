@@ -1,5 +1,5 @@
 name: Run Snyk SAST Scan
-on: push
+on: [push, workflow_call]
 jobs:
   security:
     runs-on: ubuntu-latest
@@ -9,5 +9,5 @@ jobs:
 
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/node@master
-        env:
+        env: 
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
