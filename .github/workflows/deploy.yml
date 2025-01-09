@@ -1,0 +1,14 @@
+name: Deploys the published docker image
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  quality-gate:
+    uses: ./.github/workflows/pull-request.yml
+    secrets:
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+    
