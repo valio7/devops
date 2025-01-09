@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  pull_request:
+  pull-request:
     uses: ./.github/workflows/pull-request.yml
     secrets:
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
@@ -14,7 +14,7 @@ jobs:
 
   build-docker-image:
     uses: ./.github/workflows/build-docker-image.yml
-    needs: pull_request
+    needs: pull-request
     secrets:
       DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
       DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}

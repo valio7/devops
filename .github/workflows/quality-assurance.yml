@@ -7,7 +7,7 @@ on:
         required: true
 
 jobs:
-  quality_assurance:
+  quality-assurance:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository

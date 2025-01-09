@@ -15,7 +15,7 @@ jobs:
     secrets:
       SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
-  quality_assurance:
+  quality-assurance:
     uses: ./.github/workflows/quality-assurance.yml
     secrets:
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
